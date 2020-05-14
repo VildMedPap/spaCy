@@ -102,8 +102,7 @@ for orth in [
 ]:
     _exc[orth] = [{ORTH: orth}]
 
-
-for orth in [
+spacy_exc_words = [
     "aarh.",
     "ac.",
     "adj.",
@@ -546,7 +545,102 @@ for orth in [
     "øvr.",
     "årg.",
     "årh.",
-]:
+]
+
+additional_exc_words = [
+    'a.m.b.a.',
+    'adm.',
+    'anm.',
+    'ann.',
+    'ansvh.',
+    'ass.',
+    'aud.',
+    'aut.',
+    'bio.',
+    'ca.',
+    'cal.',
+    'cirk.',
+    'cit.',
+    'co.',
+    'd.',
+    'el.',
+    'et al.',
+    'forh.',
+    'form.',
+    'gnsn.',
+    'gnst.',
+    'henh.',
+    'hft.',
+    'ibid.',
+    'kr.',
+    'lb.',
+    'mag.',
+    'mask.',
+    'mat.',
+    'matr.nr.',
+    'mdl.',
+    'medflg.',
+    'medl.',
+    'merc.',
+    'mf.',
+    'mgl.',
+    'mhp.',
+    'min.',
+    'ml.',
+    'mods.',
+    'modsv.',
+    'mvh.',
+    'm.v.h.',
+    'neutr.',
+    'no.',
+    'nr.',
+    'p.b.v.',
+    'perf.',
+    'pf.',
+    'pft.',
+    'p.f.t.',
+    'ph.',
+    'ph.d.',
+    'pharm.',
+    'phil.',
+    'plur.',
+    'pol.',
+    'præp.',
+    'præs.',
+    'pct.',
+    'påg.',
+    's.e.',
+    'sms.',
+    'to.',
+    'uafh.',
+    'ubf.',
+    'ubøj.',
+    'udd.',
+    'udg.',
+    'ult.',
+    'univ.',
+    'verb.',
+    'vol.',
+    'årl.',
+]
+
+mail_exc_words = [
+    'aftalenr.',
+    'asap.',
+    'cpr-nr.',
+    'cpr.nr',
+    'cpr.nr.',
+    'cvr.nr.',
+    'kontonr.',
+    'ma.nr.',
+    'max.',
+    'mm.',
+    'policenr.',
+    'ps.',
+    'reg.nr.'
+]
+
+for orth in spacy_exc_words + additional_exc_words + mail_exc_words:
     _exc[orth] = [{ORTH: orth}]
     capitalized = orth.capitalize()
     _exc[capitalized] = [{ORTH: capitalized}]
