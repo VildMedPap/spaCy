@@ -657,7 +657,8 @@ pension_exc_words = [
     'fax.',
     'forsikr.',
     'FO-nr.',
-    'kd.nr.'
+    'kd.nr.',
+    'A/S.'
 ]
 
 for orth in spacy_exc_words + additional_exc_words + pension_exc_words:
